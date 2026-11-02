@@ -16,6 +16,7 @@ Não há encerramento de estadias nem liberação de vagas.
 1. A placa do veículo não pode estar vazia ou conter somente espaços.
 2. A duração da estadia deve ser maior que zero.
 3. O estacionamento não pode receber uma nova estadia quando estiver lotado.
+4. O identificador da estadia deve ser maior que zero.
 
 Cada recusa será implementada com `throw new Exception(...)` e
 tratada com `try/catch` no formulário e nos testes.
