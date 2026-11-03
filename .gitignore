@@ -1,3 +1,4 @@
 cookies.txt
 *.log
 .vscode/
+/dados/estacionamento.json

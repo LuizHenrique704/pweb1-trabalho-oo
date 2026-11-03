@@ -75,24 +75,59 @@ SUCESSO: todos os testes do núcleo passaram.
 
 **Uma página que existe:** `curl.exe -i "http://localhost:8000/?pagina=..."` (cole só até o início do HTML)
 
-```text
-(cole aqui a saída do terminal)
+```
+HTTP/1.1 200 OK
+Host: localhost:8000
+Date: Tue, 03 Nov 2026 10:53:40 GMT
+Connection: close
+X-Powered-By: PHP/8.5.12
+Content-Type: text/html; charset=utf-8
 ```
 
 **Uma página que não existe:** `curl.exe -i "http://localhost:8000/?pagina=inexistente"`
 
-```text
-(cole aqui a saída do terminal)
+```
+HTTP/1.1 404 Not Found
+Host: localhost:8000
+Date: Tue, 03 Nov 2026 10:54:12 GMT
+Connection: close
+X-Powered-By: PHP/8.5.12
+Content-Type: text/html; charset=utf-8
 ```
 
 **A rota JSON:** `curl.exe -i "http://localhost:8000/?formato=json"`
 
-```text
-(cole aqui a saída do terminal)
+```
+HTTP/1.1 200 OK
+Host: localhost:8000
+Date: Tue, 03 Nov 2026 10:58:32 GMT
+Connection: close
+X-Powered-By: PHP/8.5.12
+Content-Type: application/json; charset=utf-8
 ```
 
 **O formulário com um dado inválido:** print da página com a mensagem de recusa e o log do servidor.
 
-```text
-(cole aqui o log do servidor)
 ```
+HTTP/1.1 422 Unknown Status Code
+Host: localhost:8000
+Date: Tue, 03 Nov 2026 11:00:28 GMT
+Connection: close
+X-Powered-By: PHP/8.5.12
+Content-Type: text/html; charset=utf-8
+```
+
+## Persistência em JSON
+
+- Cadastrei uma estadia válida e conferi sua presença na lista.
+- Atualizei a página e o registro permaneceu.
+- Reiniciei o servidor e o registro permaneceu.
+- Enviei duração zero e confirmei que nenhum registro foi acrescentado.
+
+Os dados ficam em dados/estacionamento.json, fora da pasta pública.
+O arquivo é criado automaticamente e ignorado pelo Git.
+
+## Escape de HTML
+
+Informei <strong>Teste</strong> no modelo do veículo.
+As tags apareceram como texto, sem aplicar negrito.
