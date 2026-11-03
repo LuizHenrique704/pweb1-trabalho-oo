@@ -1,0 +1,62 @@
+{
+    "nome": "Estacionamento Central",
+    "capacidade": 5,
+    "estadias": [
+        {
+            "id": 1,
+            "veiculo": {
+                "placa": "ABC1D23",
+                "modelo": "Uno",
+                "tarifaHora": 5,
+                "tipo": "carro"
+            },
+            "horas": 3,
+            "valor": 15
+        },
+        {
+            "id": 2,
+            "veiculo": {
+                "placa": "XYZ4E56",
+                "modelo": "Biz",
+                "tarifaHora": 3,
+                "tipo": "moto"
+            },
+            "horas": 2,
+            "valor": 6
+        },
+        {
+            "id": 3,
+            "veiculo": {
+                "placa": "3",
+                "modelo": "<strong>Teste<\/strong>",
+                "tarifaHora": 5,
+                "tipo": "carro"
+            },
+            "horas": 1,
+            "valor": 5
+        },
+        {
+            "id": 4,
+            "veiculo": {
+                "placa": "XCVXCVXCV",
+                "modelo": "<strong>Teste<\/strong>",
+                "tarifaHora": 3,
+                "tipo": "moto"
+            },
+            "horas": 2,
+            "valor": 6
+        },
+        {
+            "id": 5,
+            "veiculo": {
+                "placa": "Z3Z1N",
+                "modelo": "corola manual",
+                "tarifaHora": 5,
+                "tipo": "carro"
+            },
+            "horas": 1,
+            "valor": 5
+        }
+    ],
+    "total": 37
+}
